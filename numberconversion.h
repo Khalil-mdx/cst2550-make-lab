@@ -2,7 +2,12 @@
 #define _NUMBERCONVERSION_H_
 
 #include <string>
+#include <map>
+#include <vector>
 
+/*
+  Convert a Roman numeral to an integer.
+*/
 int romantoint(const std::string& roman_numeral) {
     std::map<char, int> romanValues = {
         {'I', 1}, {'V', 5}, {'X', 10},
@@ -27,7 +32,9 @@ int romantoint(const std::string& roman_numeral) {
     return total;
 }
 
-
+/*
+  Convert an integer to a Roman numeral representation.
+*/
 std::string inttoroman(int number) {
     std::vector<std::pair<int, std::string>> romanValues = {
         {1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"},
